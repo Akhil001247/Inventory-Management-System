@@ -13,7 +13,32 @@ app.use(loggerMiddleware);
 
 
 app.get('/', (req, res) => {
-  res.send('Inventory API is Running');
+  res.send(`
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Inventory API</title>
+      <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 2rem; }
+        h1 { color: #2c3e50; }
+        code { background: #f0f0f0; padding: 0.2rem 0.4rem; border-radius: 3px; }
+        ul { padding-left: 1.5rem; }
+        li { margin: 0.5rem 0; }
+        .endpoint { font-weight: bold; color: #367dacff; }
+      </style>
+    </head>
+    <body>
+      <h1>Inventory Management API</h1>
+      <p>Available endpoints:</p>
+      <ul>
+        <li><span class="endpoint">GET /health</span> - Check server status</li>
+        <li><span class="endpoint">POST /items</span> - Add new inventory item</li>
+        <li><span class="endpoint">GET /items</span> - List all inventory items</li>
+      </ul>
+      <p>Use <code>Content-Type: application/json</code> for POST requests.</p>
+    </body>
+    </html>
+  `);
 });
 
 app.get('/health', (req, res) => {
