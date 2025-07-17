@@ -14,7 +14,7 @@ A simple inventory management backend system built with Node.js, Express, and Mo
 
 1. Clone the repository:
    ```bash 
-   git clone [click here](https://github.com/Akhil001247/Inventory-Management-System.git)
+   git clone (https://github.com/Akhil001247/Inventory-Management-System.git)
 
 2. Install dependencies:
 
